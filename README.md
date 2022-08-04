@@ -21,6 +21,8 @@ Con este ejemplo podemos ver si por ejemplo sería Paris o seria la serie Narcos
 
 EL juego lo vamos a realizar teniendo en cuenta y realizando:
 
+El problema principal es el de como coger los datos de forma aleatoria usando el key de cada uno de las partes de la version de data.
+
 #importar los archivos de otras paginas
 
 # Que se cojan los nombres de manera random
