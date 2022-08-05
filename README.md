@@ -14,19 +14,19 @@ El formato de juego lo que pretende es hacernos elegir entre dos opciones de per
 Con este ejemplo podemos ver si por ejemplo sería Paris o seria la serie Narcos. 
 
 
-- Marcamos higher si pensamos que tiene mas busquedas
+ Marcamos higher si pensamos que tiene mas busquedas
 
-- Lower si pensamos que tiene menos busquedas. 
+ Lower si pensamos que tiene menos busquedas. 
 
 
 EL juego lo vamos a realizar teniendo en cuenta y realizando:
 
 El problema principal es el de como coger los datos de forma aleatoria usando el key de cada uno de las partes de la version de data.
 
-#importar los archivos de otras paginas
+importar los archivos de otras paginas
 
-# Que se cojan los nombres de manera random
+ Que se cojan los nombres de manera random
 
-# Definir que se compara con que.
+ Definir que se compara con que.
 
-# Elegir la ecuacion de comparacion
+ Elegir la ecuacion de comparacion
