@@ -5,7 +5,7 @@ from game_data import data
 
 from art import logo
 
-from random import random
+import random
 
 print(logo)
 
