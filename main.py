@@ -3,41 +3,83 @@
 
 from game_data import data
 
-from art import logo
+from art import logo,vs
 
-import random
+import random 
+
+from replit import clear
+
+score = 0
+cuenta_b = random.choice(data)
 
 print(logo)
 
-def format_data(cuenta):
-
 # hacer que los datos que cojamos se vean en la pantalla.
-
+def format_data(cuenta):
+  
   nombre_cuenta = cuenta["name"]
   descripcion_cuenta = cuenta["description"]
   pais_cuenta = cuenta["country"]
   return(f"{nombre_cuenta}, a {descripcion_cuenta}, de {pais_cuenta} ")
 
-# Que se cojan nombres de manera random.
-cuenta_a = random.choice(data)
-cuenta_b = random.choice(data)
-if cuenta_a == cuenta_b:
-  cuenta_b = random.choice(data)
-
-print(f"Compara A: {format_data (cuenta_a)} ")
-print(f"Compara B: {format_data (cuenta_b)} ")
-
-
-# Preguntar al usuario por su opción.
-
 # Checkear que el usuario tiene razon.
-# Conseguir el numero de followers de cada cuenta.
-# Usar el comando if para ver si el usuario tiene razon. 
 
-# Dar feedback al usuario de su eleción.
+def check_answer(guess, seguidores_a, seguidores_b):
+  if seguidores_a > seguidores_b:
+    if guess == "a":
+      return True
+    else:
+      return False
 
-# Mantener el score.
+# Hacer que el juego se repita 
 
-# Hacer que el juego se repita.
+repite_juego = True
 
-# Hacer que la cuenta en la posición B sea la nueva guess. 
+while repite_juego:
+
+
+ 
+  
+  # Que se cojan nombres de manera random.
+  cuenta_a = cuenta_b
+  cuenta_b = random.choice(data)
+  if cuenta_a == cuenta_b:
+    cuenta_b = random.choice(data)
+  
+  print(f"Compara A: {format_data (cuenta_a)} ")
+  print(vs)
+  print(f"Contra B: {format_data (cuenta_b)}")
+  
+  
+  # Preguntar al usuario por su opción.
+  
+  guess = input("Quien tiene mas seguidores Teclea A o B").lower()
+  
+  
+  # Conseguir el numero de followers de cada cuenta.
+  
+  def seguidores(cuenta):
+    seguidores_cuenta = cuenta["follower_count"]
+    return (f"{seguidores_cuenta} ")
+  
+  
+  
+  seguidores_a = seguidores(cuenta_a)
+  seguidores_b = seguidores(cuenta_b)
+  
+  es_correcto = check_answer(guess, seguidores_a, seguidores_b)
+
+  clear()
+  
+  # Dar feedback al usuario de su eleción.
+  
+  if es_correcto:
+    score += 1
+    print(f"Ganaste! Tienes {score} puntos acumulados")
+  else:
+    repite_juego = False
+    print(f"Nop, fallaste! Tu puntuación final es {score} ")
+  
+  # Mantener el score.
+  
+  
