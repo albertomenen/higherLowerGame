@@ -5,7 +5,7 @@ from game_data import data
 
 from art import logo
 
-from random import random
+import random
 
 print(logo)
 
@@ -24,8 +24,8 @@ cuenta_b = random.choice(data)
 if cuenta_a == cuenta_b:
   cuenta_b = random.choice(data)
 
-print(f"Compara A: {format_data (account_a )} ")
-print(f"Compara B: {format_data (account_a )} ")
+print(f"Compara A: {format_data (cuenta_a)} ")
+print(f"Compara B: {format_data (cuenta_b)} ")
 
 
 # Preguntar al usuario por su opción.
