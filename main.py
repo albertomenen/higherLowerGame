@@ -19,8 +19,8 @@ def format_data(cuenta):
   return(f"{nombre_cuenta}, a {descripcion_cuenta}, de {pais_cuenta} ")
 
 # Que se cojan nombres de manera random.
-cuenta_a = random.choice(data)
-cuenta_b = random.choice(data)
+cuenta_a = random.randint(data)
+cuenta_b = random.randint(data)
 if cuenta_a == cuenta_b:
   cuenta_b = random.choice(data)
 
