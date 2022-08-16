@@ -18,6 +18,12 @@ data = [
         'country': 'United States'
     },
     {
+        'name': 'Pablo Escobar',
+        'follower_count': 0,
+        'description': 'Colombian Politician',
+        'country': 'Colombia'
+    },
+    {
         'name': 'Dwayne Johnson',
         'follower_count': 181,
         'description': 'Actor and professional wrestler',
